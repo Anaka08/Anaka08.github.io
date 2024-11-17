@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="pagina.css">
+</head>
+<body>
+
+    <header>
+        <h1>Contacto</h1>
+    </header>
+
+    <section class="contacto">
+        <h2>Formulario de Contacto</h2>
+        <form onsubmit="enviarInformacion(event)">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" required>
+
+            <label for="correo">Correo electrónico:</label>
+            <input type="email" id="correo" required>
+
+            <label for="observaciones">Observaciones:</label>
+            <textarea id="observaciones" rows="4" required></textarea>
+
+            <button type="submit">Enviar Información</button>
+        </form>
+    </section>
+
+    <script>
+        function enviarInformacion(event) {
+            event.preventDefault(); // Evita el envío del formulario por defecto
+            alert("Su información ha sido enviada.");
+            window.location.href = "pagina.html"; // Redirige a pagina.html
+        }
+    </script>
+
+</body>
+</html>

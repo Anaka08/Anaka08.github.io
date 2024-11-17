@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campeonato de Fútbol</title>
+    <link rel="stylesheet" href="pagina.css">
+</head>
+<body>
+
+    <header>
+        <h1>Campeonato de Fútbol</h1>
+        <button onclick="cerrarSesion()">Cerrar Sesión</button>
+    </header>
+
+    <section class="equipos">
+        <h2>Gestión de Equipos</h2>
+        <input type="text" id="equipo" placeholder="Ingrese nombre del equipo">
+        <button onclick="agregarEquipo()">Agregar equipo</button>
+        <button onclick="quitarEquipo()">Quitar equipo</button>
+        <ul id="listaEquipos"></ul>
+    </section>
+
+    <section class="posiciones">
+        <h2>Tabla de Posiciones</h2>
+        <button onclick="mostrarTabla()">Mostrar Tabla</button>
+        <button onclick="generarVersus()">Vs</button>
+        <button onclick="window.location.href='contacto.html'">Contacto</button>
+        <table id="tablaPosiciones">
+            <thead>
+                <tr>
+                    <th>Posición</th>
+                    <th>Equipo</th>
+                    <th>Puntos</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+
+        <!-- Sección para mostrar los enfrentamientos de Versus -->
+        <div id="versusSection">
+            <h2>Enfrentamientos</h2>
+            <ul id="listaVersus"></ul>
+        </div>
+    </section>
+
+    <footer>
+        <p>Campeonato de Futbol de Chima</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
+
+
